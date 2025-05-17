@@ -4,10 +4,10 @@ import pyodbc
 app = Flask(__name__)
 
 # Replace these values with your actual credentials
-server = 'yourserver.database.windows.net'
-database = 'yourdbname'
-username = 'youradmin'
-password = 'yourpassword'
+server = 'assignment6-sqlserver-ishijo.database.windows.net'
+database = 'assignment6-sqldb'
+username = 'ishijo'
+password = '456012ij@'
 driver = '{ODBC Driver 18 for SQL Server}'
 
 conn_str = f'DRIVER={driver};SERVER={server};DATABASE={database};UID={username};PWD={password};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
