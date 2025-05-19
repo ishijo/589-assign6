@@ -8,7 +8,7 @@ server = 'assignment6-sqlserver-ishijo.database.windows.net'
 database = 'assignment6-sqldb'
 username = 'ishijo'
 password = '456012ij@'
-driver = '{ODBC Driver 18 for SQL Server}'
+driver = '{ODBC Driver 17 for SQL Server}'
 
 conn_str = f'DRIVER={driver};SERVER={server};DATABASE={database};UID={username};PWD={password};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
 
@@ -60,3 +60,7 @@ def edit(id):
         employee = cursor.fetchone()
         conn.close()
         return render_template('edit.html', employee=employee)
+    
+
+if __name__ == '__main__':
+    app.run(debug=True)
